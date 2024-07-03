@@ -130,4 +130,65 @@ backToTopButton.addEventListener('click', function() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 });
- 
+ document.getElementById('contact-form').addEventListener('submit', function(event) {
+//     event.preventDefault();
+
+//     const apiURL = 'https://4rf76q09v2.execute-api.eu-north-1.amazonaws.com/default/prof_api';
+//     const templateParams = {
+//         "name": document.getElementById('name').value,
+//         "phone": document.getElementById('phone').value,
+//         "email": document.getElementById('email').value,
+//         "subject": document.getElementById('subject').value,
+//         "message": document.getElementById('message').value,
+//     };
+
+//     fetch(apiURL, {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//             'Access-Control-Allow-Origin': '*',
+//         },
+//         body: JSON.stringify(templateParams),
+//     })
+//     .then(response => {
+//         if (!response.ok) {
+//             return response.json().then(err => Promise.reject(err));
+//         }
+//         return response.json();
+//     })
+//     .then(data => {
+//         if (data.status === 'error') {
+//             Object.keys(data.errors).forEach(field => {
+//                 const input = document.getElementById(field);
+//                 showValidationError(input, data.errors[field]);
+//             });
+//             alert('Failed to send data. Please correct the errors and try again.');
+//         } else {
+//             alert('Data stored successfully!');
+//             console.log('SUCCESS!', data);
+//             clearForm();
+//         }
+//     })
+//     .catch(error => {
+//         alert('Failed to send data. Please try again later.');
+//         console.error('Error:', error);
+//     });
+// });
+
+// function showValidationError(input, message) {
+//     input.classList.add('is-invalid');
+//     input.nextElementSibling.textContent = message;
+// }
+
+// function hideValidationError(input) {
+//     input.classList.remove('is-invalid');
+//     input.nextElementSibling.textContent = '';
+// }
+
+// function clearForm() {
+//     document.getElementById('contact-form').reset();
+//     const inputs = document.querySelectorAll('.is-invalid');
+//     inputs.forEach(input => {
+//         hideValidationError(input);
+//     });
+// }
