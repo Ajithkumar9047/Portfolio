@@ -135,7 +135,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     event.preventDefault();
 
     const apiURL = 'https://55qkub0jof.execute-api.eu-north-1.amazonaws.com/default/portfolioApi'; // Local Flask API URL
-
+    const authHeader = 'testkey'
     const templateParams = {
         name: document.getElementById('name').value,
         phone: document.getElementById('phone').value,
@@ -148,6 +148,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            'Authorization': authHeader,
         },
         body: JSON.stringify(templateParams),
     })
